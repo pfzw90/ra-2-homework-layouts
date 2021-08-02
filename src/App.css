@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+.Store-Icon-Switch {
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  
+  padding:10px;
+
+  font-family: 'Material Icons';
+  font-size: 60px;
+  color:#282c34;
+
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Store-Icon-Switch:hover {
+  color:#3d424b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Store {
+  width:100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Store .Store-Cards-View {
+  position: relative;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items:center;
+  justify-content: space-around;
+}
+
+.Store .Store-Cards-View .Cards-View-Shop-Card {
+  position: relative;
+  width:25%;
+  margin:10px;
+  padding:10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Cards-View-Shop-Card div {
+  position: relative;
+}
+.Cards-View-Shop-Card .Card-Name {
+  width:100%;
+  order: 0;
+}
+
+.Cards-View-Shop-Card .Card-Color {
+  width:100%;
+  order: 1;
+}
+.Cards-View-Shop-Card .Card-Image {
+  order: 2;
+  position: relative;
+  width:100%;
+}
+
+.Cards-View-Shop-Card .Card-Price {
+  width:50%;
+  order: 3;
+}
+
+.Cards-View-Shop-Card .AddToCart-Button {
+  width:50%;
+  order: 4;
+}
+
+.Card-Name, .Card-Color {
+  text-transform: uppercase;
+}
+
+
+
+.Store .Store-List-View {
+  position: relative;
+  width:100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.List-View-Shop-Item {
+  position: relative;
+  width:70%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin:10px;
+  padding:15px;
+  background: #d1d1d1;
+
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.List-View-Shop-Item div {
+  position:relative;
+  height: 100px;
+  display: flex;
+
+
+
+  align-items: center;
+}
+
+.List-View-Shop-Item .Card-Image {
+  height: 100px;
 }
