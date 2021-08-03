@@ -15,21 +15,13 @@ export default function Store() {
         changeStoreView((prev) => (prev === 'view_module') ? 'view_list' : 'view_module');
     }
 
-    switch (storeView) {
-        case 'view_module':
-            return (
-                <div className = 'Store' key='Store'>
-                    <IconSwitch icon={storeView} iconClick={iconClick}/>
-                    <CardsView products={productsIndex}/>
-                </div>    
-            )
-        default:
-            return (
-                <div className = 'Store' key='Store'>
-                    <IconSwitch icon={storeView} iconClick={iconClick}/>
-                    <ListView products={productsIndex}/>
-                </div>    
-            )
-    }
+    const view = ( storeView === 'view_module') ?  <CardsView products={productsIndex}/> :  <ListView products={productsIndex}/>
+   
+    return (
+        <div className = 'Store' key='Store'>
+            <IconSwitch icon={storeView} iconClick={iconClick}/>
+            {view}
+        </div>    
+    )
    
 }
